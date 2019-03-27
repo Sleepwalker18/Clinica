@@ -1,0 +1,76 @@
+.bg_staff {
+	background-image: url(http://healthandcare.ancorathemes.com/wp-content/uploads/2015/07/img_parallax1_team.jpg)
+}
+
+.staff_container {
+	height: 605px;
+	width: 100vw;
+	margin: 0 auto;
+}
+
+.gf {
+	background: transparent;
+}
+
+.staff {
+
+	h1 {
+		color: white;
+		font-family: "Open Sans Condensed", sans-serif !important;
+		font-weight: 700;
+		font-size: 1.2rem;	
+		text-align: center;
+		text-transform: uppercase;
+		padding-top: 20%;
+		margin-bottom: 10px; 
+	}
+
+	h6 {
+		color: #7c7d8d;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+		font-family: "Open Sans" !important;
+		font-weight: 700;
+		font-size: .9rem;
+	}
+
+	span {
+		display: block;
+		margin: 7px;
+		font-size: .65rem;
+		color: #9b9cab;
+	}
+
+}
+
+.personal_data {
+	width: 270px;
+	padding: 20px 0;
+	background-color: rgba(255, 255, 255, 0.1);
+	margin: 0 auto;
+}
+
+.staff_image {
+	width: 270px !important;
+	height: 270px;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.staff_container {
+		height: 593px;
+		width: 460px;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.staff_container {
+		height: 713px;
+	}
+
+}

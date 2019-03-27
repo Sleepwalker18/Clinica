@@ -1,0 +1,57 @@
+.bg_elements {
+	background-image: url("http://healthandcare.ancorathemes.com/wp-content/uploads/2015/07/img_parallax1.jpg");
+	background-position: 50% 0px;
+}
+
+.opinion_container {
+	height: 211px;
+	width: 280px;
+	margin: 0 auto;
+}
+
+.opinion {
+
+	color: white;
+
+	p {
+		font-family: "Open Sans Condensed", sans-serif !important;
+		font-weight: 700;
+		font-size: 1.2rem;	
+		text-align: center;
+		text-transform: uppercase;
+		padding-top: 20%;
+		margin-bottom: 10px; 
+	}
+
+	span {
+		display: inline-block;
+		margin: 7px;
+	}
+
+}
+
+.opinion_image {
+	width: 35px !important;
+	height: 35px;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.opinion_container {
+		height: 283px;
+		width: 460px;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.opinion_container {
+		width: 660px;
+	}
+
+	.opinion p {
+		padding-top: 15%;
+	}
+
+}

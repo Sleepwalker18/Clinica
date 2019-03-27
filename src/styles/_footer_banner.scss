@@ -1,0 +1,194 @@
+
+
+.banner_container {
+	margin: 10vh 0;
+
+	iframe{
+		width: 100vw;
+		height: 300px;
+		border: none;
+	}
+}
+
+.banner_content {
+	height: 42vh;
+	background-color: #c6c8d9;
+	text-align: -webkit-center;
+}
+
+.banner_tittle {
+	padding: 15% 0;
+	color: white;
+	width: 280px;
+	text-align: -webkit-left;
+
+	h1 {
+		font-family: "Open Sans Condensed", sans-serif !important;
+		font-weight: 700;
+		font-size: 2.7rem;
+		margin:0;	
+	}
+
+	p {
+		font-weight: 600;
+		font-size: .7rem;
+	}
+
+	.sc_link {
+		border-style: none;
+	}
+
+}
+
+.banner_contact {
+	height: 42vh;
+	background-color: #595d8f;
+	text-align: -webkit-center;
+}
+
+.contact_address {
+	padding: 15% 0;
+	width: 280px;
+	text-align: -webkit-left;
+
+	.address_link, p {
+		color: white;
+		font-size: 1.3rem;
+		font-weight: 700;
+		margin: 0 0 0 40px;
+	}
+
+	.address_link {
+		padding-top: 12px;
+	}
+
+	.sc_link {
+		border-style: none;
+		font-size: .75rem;
+		padding: 15px;
+	}
+
+	.area_link {
+		margin: 40px 5px 0 5px;
+		background-color: rgba(239, 239, 239, 0.1) !important;
+		position: absolute;
+	}
+
+	.info_icon {
+		width: .8rem;
+		height: .8rem;
+	}
+
+}
+
+.address_icon {
+	color: white;
+	height: 1.5rem; 
+	width: 1.5rem;
+	position: absolute;
+	margin-top: 10px;
+}
+
+.map {
+	margin-bottom: 10vh;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.banner_content {
+		height: 223px;
+	}	
+
+	.banner_tittle {
+		padding: 5% 0;
+		width: 600px;
+	}
+
+	.banner_contact {
+		height: 168px;
+	}
+
+	.contact_address {
+		padding: 5% 0;
+		width: 600px;
+		display: -webkit-box;
+		
+		.address_link, p {
+			font-size: .8rem;
+			display: -webkit-inline-box;
+			vertical-align: middle;
+		}
+
+		.address_link {
+			padding-bottom: 5px;
+		}
+
+		.area_link {
+			margin: 10px 0 0 150px;
+			display: -webkit-box;
+			width: 300px; 
+		}
+
+	}
+
+	.address_icon {
+		margin: 10px 0 0 10px;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+	
+	.banner_container iframe {
+		width: calc(100vw - 15px);
+	}
+
+	.banner_content {
+		height: 320px;
+	}	
+
+	.banner_contact {
+		height: 160px;
+	}
+
+	.banner_tittle {
+		padding: 5% 0;
+		width: 1170px;
+
+		h1 {
+			font-size: 4.7rem;
+		}
+
+		.sc_link {
+			padding: 14px 18px;
+			font-size: .8rem;
+		}
+
+	}
+
+	.contact_address {
+
+		padding: 3% 0;
+		display: -webkit-box;
+		width: 1170px;
+
+		.address_link, p {
+			color: white;
+			font-size: 1.3rem;
+			font-weight: 700;
+			margin: 0 0 0 40px;
+			padding: 12px;
+		}
+
+		.area_link {
+			margin: 20px 0 0 180px;
+			display: initial;
+		}
+
+	}
+
+	.address_icon {
+		margin: 10px 0 0 20px;
+	}
+
+}

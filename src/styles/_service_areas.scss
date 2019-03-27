@@ -1,0 +1,132 @@
+$tittle-color: #ff5b4f;
+$font-color: #9b9cab;
+
+.sa_container {
+	margin: 5vh auto;
+	text-align: -webkit-center;
+}
+
+.sa_format {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto;
+	grid-auto-flow: column;
+	text-align: -webkit-left;
+	width: 280px;
+}
+
+.sa_tittle_container {
+	padding: 8vh 0 4vh 0;
+	text-align: center;
+}
+
+.sa_tittle {
+	font-size: 1.5rem;
+    font-family: "Open Sans Condensed", sans-serif !important;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sa_tittle_regular {
+	color: $tittle-color;
+	margin-bottom: 20px;
+}
+
+@mixin services_area($service_number) {
+	grid-column: 1;
+    grid-row: $service_number;
+}
+
+	.services_area_1 {
+		@include services_area(1);
+	}
+
+	.services_area_2 {
+		@include services_area(2);
+	}
+
+	.services_area_3 {
+		@include services_area(3);
+	}
+
+	.sa_list_format {
+		list-style-type: none;
+		color: $font-color;
+		font-size: .7rem;
+		font-weight: bold;
+		margin: 10px 0;
+	}
+
+	.sa_item_icon {
+		color: $tittle-color;
+		height: 1rem; 
+		width: 1rem;
+		margin-right: 5px;
+	}
+
+	.about_areas {
+		text-align: center;
+	}
+
+	.area_button {
+		display: inline-block;
+	}
+
+	.area_link {
+		color: white;
+		background-color: $tittle-color !important;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+@media only screen and (min-width: 768px) {
+
+	.sa_format {
+		grid-template-columns: 200px 200px 200px;
+		grid-template-rows: auto;
+		width: 600px;
+	}
+
+	@mixin services_area($service_number) {
+		grid-row: 1;
+	    grid-column: $service_number;
+	}
+
+	.services_area_1 {
+		@include services_area(1);
+	}
+
+	.services_area_2 {
+		@include services_area(2);
+	}
+
+	.services_area_3 {
+		@include services_area(3);
+	}
+
+	.sa_list_format {
+		font-size: .6rem;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.sa_tittle {
+		font-size: 2.5rem;
+	}
+
+	.sa_format {
+		grid-template-columns: 370px 370px 370px;
+		width: 1170px;
+	}
+
+	.sa_list_format {
+		font-size: .8rem;
+	}
+
+	.about_areas .sc_link {
+		font-size: .8rem;
+	}
+
+}
