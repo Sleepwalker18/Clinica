@@ -77,12 +77,6 @@ $bg-color: #c6c8d9;
 		    line-height: 1;
 		}
 
-		.top_panel_wrap li:hover{
-			.sub-menu {
-				display: block;
-			}
-		}
-
 		.sub-menu {
 			display: none;
 			position: absolute;
@@ -90,6 +84,10 @@ $bg-color: #c6c8d9;
 			min-width: 260px;
 			z-index: 1;
 			margin: 33px 0 0 0;
+		}
+
+		.sub-active {
+			display: contents !important;
 		}
 
 		.sub-menu li{
@@ -144,6 +142,14 @@ $bg-color: #c6c8d9;
 					color: #9b9cab;
 					padding: 8px 5px;
 					font-size: .8em;
+
+					.sub_menu_icon {
+						height: 1.2em;
+						width: 1.2em;
+						float: right;
+						color: black;
+					}
+
 				}
 
 				.search_icon {
@@ -269,6 +275,19 @@ $bg-color: #c6c8d9;
 
 	.menu-item {
 		padding: 30px 8px;
+		.sub_menu_icon {
+			display: none;
+		}
+	}
+
+	.top_panel_wrap li:hover{
+		.sub-menu, .sub-active {
+			display: block !important;
+		}
+	}
+
+	.sub-active {
+		display: none !important;
 	}
 
 }

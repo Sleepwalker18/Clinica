@@ -32,9 +32,7 @@ const FooterBanner = () => (
 					</a>
 				</div>
 			</div>
-			<div className = "map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.9925379686!2d-100.99501276697477!3d22.19305525700981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a9f7502306919%3A0xd95231c610e540f!2sSauzalito+5ta+Secc%2C+San+Luis%2C+S.L.P.!5e0!3m2!1ses-419!2smx!4v1553156278998"></iframe>
-			</div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.9925379686!2d-100.99501276697477!3d22.19305525700981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a9f7502306919%3A0xd95231c610e540f!2sSauzalito+5ta+Secc%2C+San+Luis%2C+S.L.P.!5e0!3m2!1ses-419!2smx!4v1553156278998"></iframe>
 		</div>
 	</div>
 

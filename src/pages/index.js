@@ -10,7 +10,7 @@ import FooterBanner from "../components/footer_banner"
 import DoctorsCarousel from "../components/doctors_carousel"
 import OpinionsCarousel from "../components/opinions_carousel"
 import StaffCarousel from "../components/staff_carousel"
-import {CircleArrow as ScrollUpButton} from "react-scroll-up-button"; //Add this line Here
+import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 
 import * as feather from 'styled-icons/feather'
 import * as faSolid from 'styled-icons/fa-solid'

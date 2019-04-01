@@ -3,52 +3,95 @@ import "../styles/_navbar.scss"
 
 import {Menu} from 'styled-icons/material'
 import {Search} from 'styled-icons/fa-solid'
+import NavItem from './nav_item'
 
 class Navbar extends React.Component {
 
 	constructor(props) {
 		super(props);
     	this.state = {
-    		isActive: false, 
-    		searchForm: false,
+    		search: 'search-active',
+    		searchColumn: 'new_width',
+    		menu: 'menu-active',
     	};
     	this.changeState = this.changeState.bind(this);
     	this.searchState = this.searchState.bind(this);
-    	this.menu = 'menu-active';
-    	this.searchField = 'search-active';
-    	this.searchColumn = 'new_width';
 	}
 
 	changeState() {
+		var navbarState;
+		navbarState = this.state.menu === 'menu-active' ? '' : 'menu-active';
 		this.setState(state => ({
-			isActive: !state.isActive
+			menu: navbarState
 		}));
-		if(this.state.isActive) {
-			this.menu = 'menu-active';
-		}
-		else {
-			this.menu = '';
-		}
-
 	}
 
-	searchState(){
+	searchState() {
+		var searchState, searchWidth;
+		searchState = this.state.search === 'search-active' ? '' : 'search-active';
+		searchWidth = this.state.searchColumn === 'new_width' ? '' : 'new_width';
 		this.setState(state => ({
-			searchForm: !state.searchForm
+			search: searchState,
+			searchColumn: searchWidth
 		}));
-		if(this.state.searchForm) {
-			this.searchField = 'search-active';
-			this.searchColumn = 'new_width';
-		}
-		else {
-			this.searchField = '';
-			this.searchColumn = '';
-		}
 	}
 
 	render(){
+
+		var arrayItems = {
+    		one: {
+    			tittle: 'Home',
+    			list: [
+    				'Home',
+    				'Home Boxed'
+    			]
+    		},
+    		two: {
+    			tittle: 'Blog',
+    			list: [
+    				'Blog with sidebar', 
+    				'Blog without sidebar', 
+    				'Masonry',
+    				'Portfolio',
+    				'Single post formats'
+    			]
+    		},
+    		three: {
+    			tittle: 'Features',
+    			list: [
+    				'Typography',
+					'Shortcodes',
+					'Calculated from fields'
+    			]
+    		},
+    		four: {
+    			tittle: 'Team',
+    			list: [
+					'Departments',
+					'Dr. John Warner'
+				]
+    		},
+    		five: {
+    			tittle: 'Appointments',
+    		},
+    		six: {
+    			tittle: 'Gallery',
+    			list: [
+    				'Grid',
+					'Masonry',
+					'Cobbies'
+    			]
+    		},
+    		seven: {
+    			tittle: 'Shop',
+    		},
+    		eight: {
+    			tittle: 'Contacts',
+    		}
+    	};
+
 		return(
-			<div className = {"contact_logo " + this.searchColumn}>
+			<div className = {"contact_logo " + this.state.searchColumn}>
 				<div className = "row_container_1">
 					<div className = "column1">
 						<div className = "logo">
@@ -67,63 +110,22 @@ class Navbar extends React.Component {
 					<div className = "column3">
 						<form className = "search_form">
 							<Search className = "search_icon" onClick = {this.searchState}/>
-							<input type = "text" className = {"search_field " + this.searchField} placeholder = "Search"/>
+							<input type = "text" className = {"search_field " + this.state.search} placeholder = "Search"/>
 						</form>
 					</div>
 				</div>
-				<div className = {"row_container_2 " + this.menu} >
+				<div className = {"row_container_2 " + this.state.menu} >
 					<div className = "menu_area">
 						<nav className = "menu-items">
 							<ul className = "top_panel_wrap">
-								<li className = "menu-item">
-									<a>Home</a>
-									<ul className = "sub-menu">
-										<li>Home</li>
-										<li>Home Boxed</li>
-									</ul>
-								</li>
-								<li className = "menu-item">
-									<a>Blog</a>
-									<ul className = "sub-menu">
-										<li>Blog with sidebar</li>
-										<li>Blog without sidebar</li>
-										<li>Masonry</li>
-										<li>Portfolio</li>
-										<li>Single post formats</li>
-									</ul>
-								</li>
-								<li className = "menu-item">
-									<a>Features</a>
-									<ul className = "sub-menu">
-										<li>Typography</li>
-										<li>Shortcodes</li>
-										<li>Calculated from fields</li>
-									</ul>
-								</li>
-								<li className = "menu-item">
-									<a>Team</a>
-									<ul className = "sub-menu">
-										<li>Departments</li>
-										<li>Dr. John Warner</li>
-									</ul>
-								</li>
-								<li className = "menu-item">
-									<a>Appointments</a>
-								</li>
-								<li className = "menu-item">
-									<a>Gallery</a>
-									<ul className = "sub-menu">
-										<li>Grid</li>
-										<li>Masonry</li>
-										<li>Cobbies</li>
-									</ul>
-								</li>
-								<li className = "menu-item">
-									<a>Shop</a>
-								</li>
-								<li className = "menu-item">
-									<a>Contacts</a>
-								</li>
+								<NavItem items = {arrayItems.one}/>
+								<NavItem items = {arrayItems.two}/>
+								<NavItem items = {arrayItems.three}/>
+								<NavItem items = {arrayItems.four}/>
+								<NavItem items = {arrayItems.five}/>
+								<NavItem items = {arrayItems.six}/>
+								<NavItem items = {arrayItems.seven}/>
+								<NavItem items = {arrayItems.eight}/>
 							</ul>
 						</nav>
 					</div>
